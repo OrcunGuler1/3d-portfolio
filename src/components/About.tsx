@@ -1,9 +1,11 @@
+/* eslint-disable react-refresh/only-export-components */
 import { Tilt } from 'react-tilt'
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { services } from '../constants'
 import { fadeIn, textVariant } from '../utils/motion'
 import { DetailedHTMLProps, FC, HTMLAttributes } from 'react'
+import SectionWrapper from '../SectionWrapper'
 
 const Div: FC<
   DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> & {
@@ -70,4 +72,4 @@ const About = () => {
   )
 }
 
-export default About
+export default SectionWrapper(About, 'about')
